@@ -1,0 +1,5 @@
+1. Simple Math Calculator
+create a simple math calculator using html,css and java script.It should have functionality for addition,subtraction,multiplication and division
+2. Create a simple todolist
+3.create a simple currencyconverter use any opensource api for this. it is better if it does not ask for any key
+4.create a weatherapp use opensource api which does not ask for any key
