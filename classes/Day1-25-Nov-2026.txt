@@ -71,9 +71,35 @@ create virtual environment
 open pythonapi folder in terminal
 python -m venv myenv
 
+./myenv/Scripts/activate
 activate virtual environment
+In case you are getting error
+open windows power shell as an administrator
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+Y
+
+Open new terminal or close the visual studio code
+and again activate virtual environment
 
 pip install flask
+
+8. prompt
+create simplemathcalculator.py flask api. 
+It should have methods to add,subtract,multiply 
+and divide any two numbers
+
+to test api
+use tools like postman
+or curl
+
+
+http methods
+get,post,put,delete
+
+check postman is installed
+
 
 
 
