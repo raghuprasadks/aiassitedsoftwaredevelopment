@@ -1,0 +1,89 @@
+Agenda:
+1. Introduction to AI
+2. AI and its applications
+3. Generative AI
+4. Software Development Life Cycle
+(SDLC)
+5. Demonstration of AI Assisted Software
+Development
+chatgpt
+Visual Studio Code
+co-pilot
+Develop a simple math calculator
+using html,css and java script
+6. Usage of prompt
+Prompt 1
+I want to develop a simple Math Calculator
+using html,css and java script
+Prompt 2
+Create separate files for javascript,html and css
+Hands-on 2
+2. Create a temperature converter
+file name tempconverter.html
+3. Create a website for CSE department of BMSIT
+
+4. Application architecture of Fullstack web application
+prompt
+You are an expert architect. I want to develop a fullstack application  using python,flask and sqlite as backend. I will be using html,css,javascript and ajax as front end. Can you create an architecture diagram. 
+I want to create api and call the api from front end
+
+API - Application programming interface
+
+5.aadhar
+
+enter aadhar 1234567891
+
+aadhar - request -url https://aadharserverip:<port>/verifyaadhar/<aadharno>
+
+response
+Json - java script object notation
+javascript object
+
+student=
+{
+rollnum:1,
+name:"xyz",
+branch:"cse",
+sem:3
+}
+
+json
+
+student=
+{
+"rollnum":1,
+"name":"xyz",
+"branch":"cse",
+"sem":3
+}
+
+
+6. You are an expert backend programmer in python. I am developing an application
+for signup. I need your expertise in creating api for sign up.
+Use python flask for creating an api.
+Create api folder and create api within it.
+
+
+7. API development using python
+
+create virtual environment
+
+open pythonapi folder in terminal
+python -m venv myenv
+
+activate virtual environment
+
+pip install flask
+
+
+
+
+
+
+
+
+
+
+
+
+
