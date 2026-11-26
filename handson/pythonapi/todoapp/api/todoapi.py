@@ -12,8 +12,25 @@ TODO_FIELDS = {"title", "completed", "userId"}
 
 
 def create_app(database_path: str | os.PathLike[str] = DATABASE_PATH) -> Flask:
-    app = Flask(__name__)
+    ui_directory = Path(__file__).resolve().parent.parent / "ui"
+    app = Flask(
+        __name__,
+        static_folder=str(ui_directory),
+        static_url_path="/ui",
+    )
     app.config["DATABASE"] = str(database_path)
+
+    @app.get("/")
+    def serve_ui():
+        return app.send_static_file("index.html")
+
+    @app.get("/app.js")
+    def serve_app_js():
+        return app.send_static_file("app.js")
+
+    @app.get("/styles.css")
+    def serve_stylesheet():
+        return app.send_static_file("styles.css")
 
     @app.errorhandler(HTTPException)
     def handle_http_exception(error: HTTPException):

@@ -58,11 +58,24 @@ http://127.0.0.1:5003/todos/1
   "completed": completed,
   "userId": 1
 }
+
 www.kaushalya.tech
 git
 repositories
 aiassistedsoftwaredevelopment
+
+extension for database
+SQLite Viewer for VS Code
 3. Full stack development
+
+prompt:
+
+Create user interface for todos to implement crud.
+Use todoapi.py as the api.Use html,css,
+java script and ajax.
+create ui folder inside the todoapp folder
+create web files inside ui folder
+
 4. Documents
 Requirement
 Design
