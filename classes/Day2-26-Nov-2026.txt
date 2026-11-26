@@ -81,5 +81,27 @@ Requirement
 Design
 Architecture
 Testcase
+
+prompt 1 in chatgpt 
+
+You are an expert full stack developer.
+I want to create an application for 
+CSE department of BMSIT college.
+Its an engineering college
+This application is used by the students and professors
+Professors will create assignment.
+Students upload the completed assignments.
+Can you help me in creating requirements document 
+
+prompt 2
+convert into word document. Include all diagrams/dashboards
+
+prompt 3
+you are an expert designer. I have many cse graduates in my team.They have graduated recently. Can you create design document based on the above requirements,so that it would help them in developing code.
+
+
+
+
+
 5. Quality
 6. Bug fixes/enhancement
