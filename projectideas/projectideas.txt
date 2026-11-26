@@ -1,0 +1,67 @@
+20 Full-Stack Project Ideas
+
+Technology Stack:
+Programming Language: Python
+Backend Framework: Flask
+Frontend: HTML, CSS, JavaScript
+Database: SQLite
+
+1. Student Study Planner
+Manage subjects, assignments, deadlines, study schedules and academic progress.
+
+2. Online Examination System
+Admin creates questions, students attend timed examinations, automatic evaluation, score calculation and performance reports.
+
+3. Library Management System
+Manage books, student records, book availability, issuing, returns and overdue fines.
+
+4. Mini Learning Management System (LMS)
+Teachers upload study materials, create courses and assignments. Students enroll, access materials and track their learning progress.
+
+5.College Event Management System
+Create events, manage registrations, track participants and generate event passes.
+
+6. Personal Expense Tracker
+Record income and expenses, categorize spending, set monthly budgets and visualize expenses through charts.
+
+7. Team Task Management System
+Create projects, assign tasks to team members, set deadlines and monitor task completion.
+
+8. Appointment Booking System
+Users can book appointments, check available time slots, reschedule and cancel bookings. Admin manages appointments.
+
+9. Inventory Management System
+Manage products, stock levels, suppliers, purchases and sales. Generate low-stock alerts and maintain inventory records.
+
+10. Habit Tracker Application
+Create daily habits, track completion, maintain streaks, set goals and visualize progress over time.
+
+11. Campus Lost and Found Portal
+Students report lost or found belongings, upload photographs, search for items and contact the respective users.
+
+12. Volunteer Management Platform
+Organizations post volunteering opportunities. Students register, participate and track their volunteering hours.
+
+13. Student Discussion Forum
+Students create discussion threads, ask questions, comment, like posts and interact with other students.
+
+14. College Canteen Food Ordering System
+Display food menus, add items to cart, place orders and track order status. Admin manages food items and orders.
+
+15. Job and Internship Portal
+Students create profiles, upload resumes, browse job opportunities, apply for internships and track application status. Companies can post vacancies.
+
+16. Online Customer Support System
+Customers submit queries, raise support tickets and track their status. Support staff can respond, assign and resolve tickets.
+
+17. Online Resume Builder
+Users enter their education, skills, experience and projects. Generate, preview and download professional resumes.
+
+18. Complaint Management System
+Users submit complaints, upload supporting images and track resolution status. Admin assigns and manages complaints.
+
+19. Coding Practice Platform
+Students browse programming questions, submit solutions, view scores, maintain submission history and track their progress.
+
+20. Smart Parking Management System
+Display available parking slots, book parking spaces, manage vehicle details and track parking bookings.

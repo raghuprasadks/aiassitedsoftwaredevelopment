@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Student Dashboard | BMSIT AMS{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div><p class="text-secondary mb-1">Student portal</p><h1 class="h2 mb-0">My Assignments</h1></div>
+</div>
+<div class="row g-3 mb-4">
+  <div class="col-6 col-md-3"><div class="stat-card"><span id="total-count">0</span><small>Total</small></div></div>
+  <div class="col-6 col-md-3"><div class="stat-card"><span id="pending-count">0</span><small>Pending</small></div></div>
+  <div class="col-6 col-md-3"><div class="stat-card"><span id="submitted-count">0</span><small>Submitted</small></div></div>
+  <div class="col-6 col-md-3"><div class="stat-card"><span id="results-count">0</span><small>Evaluated</small></div></div>
+</div>
+<div class="card">
+  <div class="card-header bg-white fw-bold">Assignments</div>
+  <div class="table-responsive"><table class="table table-hover align-middle mb-0">
+    <thead><tr><th>Assignment</th><th>Subject</th><th>Due date</th><th>Action</th></tr></thead>
+    <tbody id="student-assignment-list"><tr><td colspan="4" class="text-center py-4">Loading...</td></tr></tbody>
+  </table></div>
+</div>
+<div class="modal fade" id="submitModal" tabindex="-1">
+  <div class="modal-dialog"><form class="modal-content" id="submission-form">
+    <div class="modal-header"><h2 class="modal-title fs-5">Submit Assignment</h2><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+    <div class="modal-body"><input type="hidden" id="submission-assignment-id">
+      <label class="form-label" for="submission-files">Files (maximum 5, 20 MB each)</label>
+      <input class="form-control mb-3" id="submission-files" type="file" multiple required>
+      <label class="form-label" for="submission-comments">Comments</label>
+      <textarea class="form-control" id="submission-comments" rows="3"></textarea>
+    </div>
+    <div class="modal-footer"><button class="btn btn-primary" type="submit">Submit</button></div>
+  </form></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/student.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Login | BMSIT AMS{% endblock %}
+{% block content %}
+<div class="login-shell">
+  <section class="login-card card shadow-lg">
+    <div class="card-body p-4 p-md-5">
+      <div class="text-center mb-4">
+        <div class="brand-mark mx-auto mb-3">AMS</div>
+        <h1 class="h3">BMSIT Assignment Management</h1>
+        <p class="text-secondary">Sign in to continue</p>
+      </div>
+      <form id="login-form">
+        <div class="mb-3">
+          <label class="form-label" for="email">Email address</label>
+          <input class="form-control" id="email" type="email" required autocomplete="username">
+        </div>
+        <div class="mb-4">
+          <label class="form-label" for="password">Password</label>
+          <input class="form-control" id="password" type="password" required autocomplete="current-password">
+        </div>
+        <button class="btn btn-primary w-100" type="submit">Sign in</button>
+        <p class="text-danger small mt-3 mb-0" id="login-error" role="alert"></p>
+      </form>
+    </div>
+  </section>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+{% endblock %}

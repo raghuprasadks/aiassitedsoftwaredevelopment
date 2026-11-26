@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Administrator Dashboard | BMSIT AMS{% endblock %}
+{% block content %}
+<p class="text-secondary mb-1">Administrator portal</p>
+<h1 class="h2 mb-4">Department Overview</h1>
+<div class="row g-3">
+  <div class="col-6 col-lg-3"><div class="stat-card"><span id="admin-students">0</span><small>Students</small></div></div>
+  <div class="col-6 col-lg-3"><div class="stat-card"><span id="admin-professors">0</span><small>Professors</small></div></div>
+  <div class="col-6 col-lg-3"><div class="stat-card"><span id="admin-subjects">0</span><small>Subjects</small></div></div>
+  <div class="col-6 col-lg-3"><div class="stat-card"><span id="admin-assignments">0</span><small>Assignments</small></div></div>
+</div>
+<div class="card mt-4"><div class="card-header bg-white fw-bold">Submission report</div>
+  <div class="table-responsive"><table class="table align-middle mb-0">
+    <thead><tr><th>Assignment</th><th>Total</th><th>Submitted</th><th>Pending</th></tr></thead>
+    <tbody id="admin-report"><tr><td colspan="4" class="text-center py-4">Loading...</td></tr></tbody>
+  </table></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+{% endblock %}

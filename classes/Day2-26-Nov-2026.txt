@@ -95,9 +95,55 @@ Can you help me in creating requirements document
 
 prompt 2
 convert into word document. Include all diagrams/dashboards
-
 prompt 3
 you are an expert designer. I have many cse graduates in my team.They have graduated recently. Can you create design document based on the above requirements,so that it would help them in developing code.
+prompt 4
+you are an expert testing professional. Based on the requirements document can you create test plan
+prompt 5
+you are an expert testing professional. Based on the requirements document can you create testcases
+
+Assignment
+Fullstack application - assignment management system (ams)
+Steps:
+1. create assignment/ams folder
+2. open ams folder in visual studio code
+3. create and activate virtual environment inside ams folder
+python -m venv myenv
+./myenv/Scripts/active
+4. Upload requirement and design document inside co-pilot
+5. You are expect full stack developer. Using uploaded requirements
+and design document create full stack web application
+6. Installed required library and run
+7. Demonstrate the working of assignment management system
+
+Nocode platforms
+1. codex
+2. emergent
+3. cursor
+
+assignments in 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
