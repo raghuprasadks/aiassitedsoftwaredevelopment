@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Todo Board</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Todo Board home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="m6.5 12.5 3.2 3.2L18 7.8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+        </span>
+        <span>todo<span class="brand-light">board</span></span>
+      </a>
+      <span class="topbar-note"><span class="live-dot"></span> Your day, in focus</span>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">YOUR WORKSPACE</p>
+      <div class="intro-row">
+        <div>
+          <h1 id="page-title">Things to do<span class="heading-period">.</span></h1>
+          <p class="subtitle">A little progress each day adds up to big results.</p>
+        </div>
+        <button class="refresh-button" id="refresh-button" type="button" aria-label="Refresh todos">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 7v5h-5M4 17v-5h5m-3.1-3A7 7 0 0 1 18 7l2 5M4 12l2 5a7 7 0 0 0 12.1 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Refresh</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Todo summary">
+      <article class="stat-card">
+        <span class="stat-icon total-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <div><p class="stat-label">Total tasks</p><p class="stat-value" id="total-count">—</p></div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon done-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <div><p class="stat-label">Completed</p><p class="stat-value" id="completed-count">—</p></div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon pending-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <div><p class="stat-label">Still to do</p><p class="stat-value" id="pending-count">—</p></div>
+      </article>
+    </section>
+
+    <section class="todo-panel" aria-labelledby="list-heading">
+      <div class="panel-heading">
+        <div>
+          <h2 id="list-heading">Your tasks</h2>
+          <p class="list-caption" id="list-caption">Loading your todo list…</p>
+        </div>
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input id="search-input" type="search" placeholder="Search tasks" autocomplete="off" aria-label="Search tasks">
+          <kbd>/</kbd>
+        </label>
+      </div>
+
+      <div class="toolbar">
+        <div class="filter-tabs" role="group" aria-label="Filter tasks">
+          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All <span id="all-filter-count">—</span></button>
+          <button class="filter-button" type="button" data-filter="pending" aria-pressed="false">To do</button>
+          <button class="filter-button" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+        </div>
+        <label class="sort-control">
+          <span>Sort by</span>
+          <select id="sort-select" aria-label="Sort tasks">
+            <option value="id-asc">Task number</option>
+            <option value="id-desc">Newest first</option>
+            <option value="title-asc">A to Z</option>
+            <option value="title-desc">Z to A</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="status-message" id="status-message" role="status" aria-live="polite">
+        <span class="spinner" aria-hidden="true"></span>
+        <span>Fetching your tasks…</span>
+      </div>
+      <ul class="todo-list" id="todo-list" aria-label="Todo items"></ul>
+
+      <footer class="list-footer">
+        <p id="page-summary">—</p>
+        <nav class="pagination" aria-label="Todo list pages">
+          <button id="previous-page" type="button" aria-label="Previous page" disabled>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m14.5 18-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <span id="page-indicator">1 / 1</span>
+          <button id="next-page" type="button" aria-label="Next page" disabled>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9.5 18 6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </nav>
+      </footer>
+    </section>
+    <p class="attribution">Tasks provided by <a href="https://jsonplaceholder.typicode.com/todos" target="_blank" rel="noreferrer">JSONPlaceholder</a></p>
+  </main>
+</body>
+</html>

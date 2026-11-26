@@ -1,0 +1,72 @@
+Agenda:
+1.API's
+weather api
+
+openweathermap
+https://api.openweathermap.org/data/4.0/onecall/current?lat={lat}&lon={lon}&appid={API key}
+
+jsonplaceholder
+https://jsonplaceholder.typicode.com/todos
+
+[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "delectus aut autem",
+    "completed": false
+  },
+https://jsonplaceholder.typicode.com/todos/1
+currency converter api
+stock market api
+
+prompt
+Develop an application 
+to list the todos using 
+https://jsonplaceholder.typicode.com/todos . 
+Use html,css,javascript and ajax
+
+
+2. API's with database
+
+create todoapp folder
+create api with in todoapp folder
+
+prompt
+create api for crud operation of todo
+use python,flask and SQLite database for this
+create todoapi.py inside api folder
+to test
+post
+
+url:
+http://127.0.0.1:5003/todos
+{
+  "title": "Assignment 1 -todos",
+  "completed": false,
+  "userId": 1
+}
+list all todos - get method
+http://127.0.0.1:5003/todos
+
+to delete a todo use delete
+http://127.0.0.1:5003/todos/2
+
+to update a todo use put method
+http://127.0.0.1:5003/todos/1
+{
+  "title": "Assignment 1 -todos",
+  "completed": completed,
+  "userId": 1
+}
+www.kaushalya.tech
+git
+repositories
+aiassistedsoftwaredevelopment
+3. Full stack development
+4. Documents
+Requirement
+Design
+Architecture
+Testcase
+5. Quality
+6. Bug fixes/enhancement
